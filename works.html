@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Works — Akin Adeyi</title>
+  <link rel="stylesheet" href="css/style.css?v=7" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300..900;1,14..32,300..900&display=swap" rel="stylesheet" />
+  <style>
+    /* inline work-detail backgrounds reuse the same CSS art classes */
+    .media-bg { position: absolute; inset: 0; }
+    .media-alt-1 {
+      background: linear-gradient(160deg,#1a1a2e 0%,#0d0d1a 100%);
+    }
+    .media-alt-1::before {
+      content:''; position:absolute; inset:0;
+      background:
+        radial-gradient(ellipse 55% 40% at 28% 58%, rgba(70,20,160,.42), transparent 62%),
+        radial-gradient(ellipse 35% 30% at 72% 30%, rgba(20,60,180,.28), transparent 55%);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-text"><span>W</span><span>O</span><span>R</span><span>K</span></div>
+  </div>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <nav class="nav nav--closed" id="nav">
+    <a href="index.html" class="nav-logo">AKDE</a>
+    <div class="nav-links">
+      <a href="works.html"  class="nav-link active">Works</a>
+      <a href="about.html"  class="nav-link">About</a>
+      <a href="#cta"        class="nav-link">Contact</a>
+      <a href="#" target="_blank" rel="noopener" class="nav-link">Resume</a>
+      <span class="nav-dot" aria-hidden="true"></span>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <svg class="icon-open" width="14" height="14" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true">
+        <rect x="0" y="0" width="5" height="5"/><rect x="9" y="0" width="5" height="5"/>
+        <rect x="4.5" y="4.5" width="5" height="5"/><rect x="0" y="9" width="5" height="5"/><rect x="9" y="9" width="5" height="5"/>
+      </svg>
+      <svg class="icon-close" width="14" height="14" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true">
+        <rect x="0" y="0" width="4" height="4"/><rect x="8" y="0" width="4" height="4"/>
+        <rect x="0" y="8" width="4" height="4"/><rect x="8" y="8" width="4" height="4"/>
+      </svg>
+    </button>
+  </nav>
+  <script>if(window.innerWidth>840)document.getElementById('nav').classList.remove('nav--closed');</script>
+
+  <!-- ── Page hero ─────────────────────────────────────────────────── -->
+  <div class="page-hero">
+    <h1 class="page-hero-title" data-anim>SELECTED<br/>WORKS</h1>
+  </div>
+
+  <!-- ── List ──────────────────────────────────────────────────────── -->
+  <!-- <div class="works-list">
+    <a href="#dark-canvas" class="works-list-item" data-anim>
+      <span class="wl-num">01</span>
+      <span class="wl-title">Dark Canvas</span>
+      <span class="wl-meta">UI / Web App<br/>2024</span>
+      <span class="wl-arrow">↗</span>
+    </a>
+    <a href="#violet-core" class="works-list-item" data-anim>
+      <span class="wl-num">02</span>
+      <span class="wl-title">Violet Core</span>
+      <span class="wl-meta">Interactive / 3D<br/>2024</span>
+      <span class="wl-arrow">↗</span>
+    </a>
+    <a href="#glass-ui" class="works-list-item" data-anim>
+      <span class="wl-num">03</span>
+      <span class="wl-title">Glass UI</span>
+      <span class="wl-meta">Design System<br/>2023</span>
+      <span class="wl-arrow">↗</span>
+    </a>
+    <a href="#type-lab" class="works-list-item" data-anim>
+      <span class="wl-num">04</span>
+      <span class="wl-title">Type Lab</span>
+      <span class="wl-meta">Creative / Type<br/>2023</span>
+      <span class="wl-arrow">↗</span>
+    </a>
+    <a href="#motion-kit" class="works-list-item" data-anim>
+      <span class="wl-num">05</span>
+      <span class="wl-title">Motion Kit</span>
+      <span class="wl-meta">Library / OSS<br/>2023</span>
+      <span class="wl-arrow">↗</span>
+    </a>
+    <a href="#pixel-atlas" class="works-list-item" data-anim>
+      <span class="wl-num">06</span>
+      <span class="wl-title">Pixel Atlas</span>
+      <span class="wl-meta">Dashboard / Data<br/>2022</span>
+      <span class="wl-arrow">↗</span>
+    </a>
+    <a href="#form-core" class="works-list-item" data-anim>
+      <span class="wl-num">07</span>
+      <span class="wl-title">Form Core</span>
+      <span class="wl-meta">Components / React<br/>2022</span>
+      <span class="wl-arrow">↗</span>
+    </a>
+    <a href="#arc-brand" class="works-list-item" data-anim>
+      <span class="wl-num">08</span>
+      <span class="wl-title">Arc Brand</span>
+      <span class="wl-meta">Branding / Web<br/>2020</span>
+      <span class="wl-arrow">↗</span>
+    </a>
+  </div> -->
+
+  <!-- ── Details ───────────────────────────────────────────────────── -->
+  <div id="pitchiq" class="works-detail">
+    <div class="works-detail-grid">
+      <div class="works-detail-info" data-anim>
+        <h2>PitchIQ</h2>
+        <p>A real-time sports dashboard delivering live scores, match results, standings and AI-powered analysis across football, basketball, tennis and the 2026 World Cup. Built for fans who want all their sports data in one place.</p>
+        <div class="works-detail-meta">
+          <span>ROLE — Solo Developer</span>
+          <span>STACK — Next.js 16, TypeScript, Supabase, Tailwind CSS, Claude AI, Vercel</span>
+          <span>YEAR — 2026</span>
+        </div>
+        <div class="works-detail-ctas">
+          <a href="https://pitchiq-ten.vercel.app/" target="_blank" rel="noopener" class="pill-btn">Live Project ↗</a>
+          <a href="https://github.com/akintolaadeyi-gif/pitchiq" target="_blank" rel="noopener" class="pill-btn">GitHub ↗</a>
+        </div>
+      </div>
+      <div class="works-detail-media" data-anim>
+        <div class="works-detail-media-item">
+          <img src="images/PitchIQ.png" alt="PitchIQ dashboard" />
+        </div>
+        <div class="works-detail-media-item tall">
+          <img src="images/PitchIQ 1.png" alt="PitchIQ live scores" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="ojuiboju" class="works-detail">
+    <div class="works-detail-grid">
+      <div class="works-detail-info" data-anim>
+        <h2>Ojuiboju <span class="pronounce">/ oh-JOO-ee-boh-joo /</span></h2>
+        <p>A streaming and cinema discovery platform dedicated to Yoruba-language films and content. Features AI-powered search and recommendations for fans of Yoruba culture and entertainment.</p>
+        <div class="works-detail-meta">
+          <span>ROLE — Solo Developer</span>
+          <span>STACK — React 19, TypeScript, Vite, Tailwind CSS 4, React Router, Express.js, Claude AI, Vercel</span>
+          <span>YEAR — 2026</span>
+        </div>
+        <div class="works-detail-ctas">
+          <a href="https://ojuiboju.vercel.app" target="_blank" rel="noopener" class="pill-btn">Live Project ↗</a>
+          <a href="https://github.com/akintolaadeyi-gif/OJUIBOJU" target="_blank" rel="noopener" class="pill-btn">GitHub ↗</a>
+        </div>
+      </div>
+      <div class="works-detail-media" data-anim>
+        <div class="works-detail-media-item tall">
+          <img src="images/Ojuibubee.png" alt="Ojuiboju cinema platform" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="glass-ui" class="works-detail">
+    <div class="works-detail-grid">
+      <div class="works-detail-info" data-anim>
+        <h2>Glass UI</h2>
+        <p>A glassmorphism design system comprising 60+ components for an enterprise SaaS product. Includes a Figma library, Storybook docs, and automated visual regression testing via Chromatic.</p>
+        <div class="works-detail-meta">
+          <span>ROLE — Frontend Architect</span>
+          <span>STACK — React, Tailwind, Storybook, Chromatic</span>
+          <span>YEAR — 2023</span>
+        </div>
+        <div class="works-detail-ctas">
+          <a href="#" target="_blank" rel="noopener" class="pill-btn">Live Project ↗</a>
+          <a href="#" target="_blank" rel="noopener" class="pill-btn">GitHub ↗</a>
+        </div>
+      </div>
+      <div class="works-detail-media" data-anim>
+        <div class="works-detail-media-item" style="position:relative;overflow:hidden;">
+          <div class="work-bg work-bg--3 media-bg"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="type-lab" class="works-detail">
+    <div class="works-detail-grid">
+      <div class="works-detail-info" data-anim>
+        <h2>Type Lab</h2>
+        <p>A typographic playground that lets designers experiment with variable font axes in real time. Used by 12 000+ creatives globally and featured by Google Fonts.</p>
+        <div class="works-detail-meta">
+          <span>ROLE — Solo Developer</span>
+          <span>STACK — Svelte, CSS Houdini, Variable Fonts</span>
+          <span>YEAR — 2023</span>
+        </div>
+        <div class="works-detail-ctas">
+          <a href="#" target="_blank" rel="noopener" class="pill-btn">Live Project ↗</a>
+          <a href="#" target="_blank" rel="noopener" class="pill-btn">GitHub ↗</a>
+        </div>
+      </div>
+      <div class="works-detail-media" data-anim>
+        <div class="works-detail-media-item" style="position:relative;overflow:hidden;">
+          <div class="work-bg work-bg--4 media-bg"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Dark CTA ─────────────────────────────────────────────────── -->
+  <section class="cta-dark" id="cta">
+    <div class="cta-socials" data-anim>
+      <a href="https://linkedin.com/in/akinadeyi"  target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://twitter.com/akinadeyi"      target="_blank" rel="noopener">Twitter</a>
+      <a href="https://github.com/akinadeyi"       target="_blank" rel="noopener">Github</a>
+    </div>
+    <h2 class="cta-heading" data-anim>
+      Curious about what we can create together?<br/>
+      Let's bring something extraordinary to life!
+    </h2>
+    <div class="cta-actions" data-anim>
+      <a href="mailto:akintolaadeyi@gmail.com" class="cta-btn">Get in Touch</a>
+      <div class="cta-avail">
+        <span class="cta-avail-dot"></span>
+        Available to Chat
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ────────────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <p>+234 801 234 5678</p>
+        <p>Email: akintolaadeyi@gmail.com</p>
+      </div>
+      <div class="footer-col footer-col--mid">
+        <p>Developed</p>
+        <p>by Akin Adeyi</p>
+      </div>
+      <div class="footer-col footer-col--end">
+        <p>All rights reserved,</p>
+        <p>FOLDE STUDIO &copy;2026</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+  <script src="js/main.js"></script>
+</body>
+</html>

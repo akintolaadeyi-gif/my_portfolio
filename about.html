@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Akin Adeyi</title>
+  <link rel="stylesheet" href="css/style.css?v=7" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300..900;1,14..32,300..900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-text"><span>A</span><span>B</span><span>O</span><span>U</span><span>T</span></div>
+  </div>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <nav class="nav nav--closed" id="nav">
+    <a href="index.html" class="nav-logo">AKDE</a>
+    <div class="nav-links">
+      <a href="works.html"  class="nav-link">Works</a>
+      <a href="about.html"  class="nav-link active">About</a>
+      <a href="#cta"        class="nav-link">Contact</a>
+      <a href="#" target="_blank" rel="noopener" class="nav-link">Resume</a>
+      <span class="nav-dot" aria-hidden="true"></span>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <svg class="icon-open" width="14" height="14" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true">
+        <rect x="0" y="0" width="5" height="5"/><rect x="9" y="0" width="5" height="5"/>
+        <rect x="4.5" y="4.5" width="5" height="5"/><rect x="0" y="9" width="5" height="5"/><rect x="9" y="9" width="5" height="5"/>
+      </svg>
+      <svg class="icon-close" width="14" height="14" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true">
+        <rect x="0" y="0" width="4" height="4"/><rect x="8" y="0" width="4" height="4"/>
+        <rect x="0" y="8" width="4" height="4"/><rect x="8" y="8" width="4" height="4"/>
+      </svg>
+    </button>
+  </nav>
+  <script>if(window.innerWidth>840)document.getElementById('nav').classList.remove('nav--closed');</script>
+
+  <!-- <div class="page-hero">
+    <h1 class="page-hero-title" data-anim>ABOUT<br/>ME</h1>
+  </div> -->
+
+  <div class="page-hero about-page-wrap">
+    <!-- Left sticky col -->
+    <div class="about-page-sticky">
+      <div class="about-page-photo" data-anim>
+        <img src="images/avatar.png" alt="Akin Adeyi" />
+      </div>
+      <!-- <p class="about-page-caption" data-anim>Akin Adeyi — Lagos, 2024</p> -->
+    </div>
+
+    <!-- Right scrolling col -->
+    <div>
+      <h2 class="about-page-heading" data-anim>FRONTEND<br/>DEVELOPER</h2>
+
+      <div class="about-page-body" data-anim>
+        <p>I'm Akin Adeyi — a frontend developer and creative technologist based in Lagos, Nigeria, working with clients and teams across the globe. I specialise in building performant, accessible, and visually compelling web interfaces.</p>
+        <p>Over five years I've shipped products used by millions: from design systems that unify engineering teams, to interactive 3D experiences that redefine how brands tell their stories online.</p>
+        <p>My process lives at the intersection of design and engineering. I care deeply about the details — micro-interactions, render performance, typographic rhythm — because the accumulation of small decisions is what separates good from memorable.</p>
+        <p>Outside of client work I contribute to open-source, mentor junior developers in Lagos, and explore emerging browser APIs.</p>
+      </div>
+
+      <div class="about-skills-block" data-anim>
+        <p class="skills-label">Stack &amp; Tools</p>
+        <div class="skills-wrap">
+          <span class="skill-pill">React</span>
+          <span class="skill-pill">TypeScript</span>
+          <span class="skill-pill">Next.js</span>
+          <span class="skill-pill">Svelte</span>
+          <span class="skill-pill">Three.js</span>
+          <span class="skill-pill">WebGL</span>
+          <span class="skill-pill">GSAP</span>
+          <span class="skill-pill">Framer Motion</span>
+          <span class="skill-pill">Tailwind CSS</span>
+          <span class="skill-pill">CSS Houdini</span>
+          <span class="skill-pill">Node.js</span>
+          <span class="skill-pill">GraphQL</span>
+          <span class="skill-pill">Figma</span>
+          <span class="skill-pill">Storybook</span>
+          <span class="skill-pill">Playwright</span>
+        </div>
+      </div>
+
+      <!-- <div class="about-skills-block" data-anim>
+        <p class="skills-label">Recognition</p>
+        <div class="skills-wrap">
+          <span class="skill-pill">Awwwards HM</span>
+          <span class="skill-pill">Google Fonts Featured</span>
+          <span class="skill-pill">CSS Design Awards SOTD</span>
+          <span class="skill-pill">GitHub Star</span>
+        </div>
+      </div> -->
+    </div>
+  </div>
+
+  <!-- ── Dark CTA ─────────────────────────────────────────────────── -->
+  <section class="cta-dark" id="cta">
+    <div class="cta-socials" data-anim>
+      <a href="https://linkedin.com/in/akinadeyi"  target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://twitter.com/akinadeyi"      target="_blank" rel="noopener">Twitter</a>
+      <a href="https://github.com/akinadeyi"       target="_blank" rel="noopener">Github</a>
+    </div>
+    <h2 class="cta-heading" data-anim>
+      Curious about what we can create together?<br/>
+      Let's bring something extraordinary to life!
+    </h2>
+    <div class="cta-actions" data-anim>
+      <a href="mailto:akintolaadeyi@gmail.com" class="cta-btn">Get in Touch</a>
+      <div class="cta-avail">
+        <span class="cta-avail-dot"></span>
+        Available to Chat
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ────────────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <p>+234 801 234 5678</p>
+        <p>Email: akintolaadeyi@gmail.com</p>
+      </div>
+      <div class="footer-col footer-col--mid">
+        <p>Developed</p>
+        <p>by Akin Adeyi</p>
+      </div>
+      <div class="footer-col footer-col--end">
+        <p>All rights reserved,</p>
+        <p>FOLDE STUDIO &copy;2026</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+  <script src="js/main.js"></script>
+</body>
+</html>

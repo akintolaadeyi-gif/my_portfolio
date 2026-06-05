@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Akin Adeyi</title>
+  <link rel="stylesheet" href="css/style.css?v=7" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300..900;1,14..32,300..900&display=swap" rel="stylesheet" />
+  <style>
+    /* page-level dark override */
+    body { background: #000; }
+  </style>
+</head>
+<body>
+
+  <div class="page-loader" id="pageLoader" style="background:#000;">
+    <div class="loader-text" style="color:#fff;"><span>S</span><span>A</span><span>Y</span><span>S</span></div>
+  </div>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- dark nav -->
+  <nav class="nav nav--light nav--closed" id="nav">
+    <a href="index.html" class="nav-logo">AKDE</a>
+    <div class="nav-links">
+      <a href="works.html"  class="nav-link">Works</a>
+      <a href="about.html"  class="nav-link">About</a>
+      <span class="nav-dot" aria-hidden="true"></span>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <svg class="icon-open" width="14" height="14" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true">
+        <rect x="0" y="0" width="5" height="5"/><rect x="9" y="0" width="5" height="5"/>
+        <rect x="4.5" y="4.5" width="5" height="5"/><rect x="0" y="9" width="5" height="5"/><rect x="9" y="9" width="5" height="5"/>
+      </svg>
+      <svg class="icon-close" width="14" height="14" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true">
+        <rect x="0" y="0" width="4" height="4"/><rect x="8" y="0" width="4" height="4"/>
+        <rect x="0" y="8" width="4" height="4"/><rect x="8" y="8" width="4" height="4"/>
+      </svg>
+    </button>
+  </nav>
+  <script>if(window.innerWidth>840)document.getElementById('nav').classList.remove('nav--closed');</script>
+
+  <!-- ── CTA ───────────────────────────────────────────────────────── -->
+  <section class="cta-dark" style="min-height:calc(100svh - 80px); padding-top: calc(var(--nav-h) + clamp(48px,8vw,100px));">
+
+    <div class="cta-socials" data-anim>
+      <a href="https://linkedin.com/in/akinadeyi"  target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://twitter.com/akinadeyi"      target="_blank" rel="noopener">Twitter</a>
+      <a href="https://behance.net/akinadeyi"       target="_blank" rel="noopener">Behance</a>
+    </div>
+
+    <h1 class="cta-heading" data-anim>
+      Curious about what we can create together?<br/>
+      Let's bring something extraordinary to life!
+    </h1>
+
+    <div class="cta-actions" data-anim>
+      <a href="mailto:hello@akinadeyi.dev" class="cta-btn">Get in Touch</a>
+      <div class="cta-avail">
+        <span class="cta-avail-dot"></span>
+        Available For Work
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ── Footer ────────────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <p>+234 801 234 5678</p>
+        <p>hello@akinadeyi.dev</p>
+      </div>
+      <div class="footer-col footer-col--mid">
+        <p>Designed &amp; Developed</p>
+        <p>by Akin Adeyi</p>
+      </div>
+      <div class="footer-col footer-col--end">
+        <p>All rights reserved,</p>
+        <p>AKDE &copy;2024</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+  <script src="js/main.js"></script>
+  <script>
+    /* keep nav white on this fully dark page */
+    document.getElementById('nav').classList.add('nav--light');
+    /* prevent nav border appearing on scroll */
+    document.getElementById('nav').addEventListener('scroll', () => {}, {passive:true});
+  </script>
+</body>
+</html>
