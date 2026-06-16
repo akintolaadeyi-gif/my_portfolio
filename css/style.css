@@ -67,6 +67,8 @@ button        { font-family: inherit; cursor: none; border: none; background: no
 .cursor.is-hover { width: 60px; height: 60px; background: rgba(10,10,10,0.04); }
 .cursor.is-link  { width: 52px; height: 52px; background: var(--ink); border-color: var(--ink); mix-blend-mode: difference; }
 .cursor.is-link ~ .cursor-dot { background: #fff; }
+.cursor.on-dark { border-color: rgba(255,255,255,0.55); transition: width .22s var(--ease), height .22s var(--ease), border-color .2s, background .22s; }
+.cursor.on-dark ~ .cursor-dot { background: #fff; }
 
 /* ─── Page Loader ────────────────────────────────────────────────── */
 .page-loader {
@@ -192,12 +194,11 @@ button        { font-family: inherit; cursor: none; border: none; background: no
 
 /* ─── Hero ───────────────────────────────────────────────────────── */
 .hero {
-  min-height: auto;
-  padding: calc(var(--nav-h) + 20px) var(--gx) clamp(32px, 3.5vw, 60px);
+  min-height: 90svh;
+  padding: calc(var(--nav-h) + 20px) var(--gx) clamp(40px, 5vw, 72px);
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  gap: clamp(24px, 4vw, 48px);
+  justify-content: space-between;
 }
 
 /* top row: name + avatar */
@@ -211,7 +212,7 @@ button        { font-family: inherit; cursor: none; border: none; background: no
 
 .hero-name {
   flex: 1;
-  font-size: clamp(3.5rem, 13vw, 12rem);
+  font-size: clamp(3.5rem, 11.7vw, 10.5rem);
   font-weight: 700;
   line-height: 0.87;
   letter-spacing: -0.03em;
@@ -272,9 +273,9 @@ button        { font-family: inherit; cursor: none; border: none; background: no
 .hero-bottom {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: flex-start;
   gap: 24px;
-  margin-top: clamp(24px, 4vw, 48px);
+  margin-top: clamp(40px, 4vw, 56px);
 }
 
 .hero-email {
@@ -593,7 +594,7 @@ button        { font-family: inherit; cursor: none; border: none; background: no
   padding: calc(var(--nav-h) + clamp(44px, 9vw, 110px)) var(--gx) clamp(28px, 4vw, 56px);
 }
 .page-hero-title {
-  font-size: clamp(2rem, 13vw, 12rem);
+  font-size: clamp(2rem, 9vw, 8.2rem);
   font-weight: 800;
   line-height: 0.88;
   letter-spacing: -0.03em;
@@ -698,7 +699,7 @@ button        { font-family: inherit; cursor: none; border: none; background: no
 .about-page-caption { font-size: 0.7rem; color: var(--muted); letter-spacing: .05em; }
 
 .about-page-heading {
-  font-size: clamp(2.2rem, 5.5vw, 5rem);
+  font-size: clamp(2.2rem, 5.6vw, 5rem);
   font-weight: 800;
   letter-spacing: -0.03em;
   line-height: .92;

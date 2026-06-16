@@ -3,11 +3,19 @@ const cursor    = document.getElementById('cursor');
 const cursorDot = document.getElementById('cursorDot');
 let mx = -200, my = -200, cx = -200, cy = -200;
 
+const darkEls = document.querySelectorAll('.cta-dark');
+
 if (cursor) {
   document.addEventListener('mousemove', e => {
     mx = e.clientX; my = e.clientY;
     cursorDot.style.left = mx + 'px';
     cursorDot.style.top  = my + 'px';
+    const overDark = [...darkEls].some(s => {
+      const r = s.getBoundingClientRect();
+      return mx >= r.left && mx <= r.right && my >= r.top && my <= r.bottom;
+    });
+    cursor.classList.toggle('on-dark', overDark);
+    cursorDot.classList.toggle('on-dark', overDark);
   });
 
   (function tick() {
