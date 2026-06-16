@@ -32,7 +32,16 @@ if (cursor) {
 /* ─── Page loader ────────────────────────────────────────────────── */
 function dismissLoader() {
   const loader = document.getElementById('pageLoader');
-  if (loader) setTimeout(() => loader.classList.add('loaded'), 700);
+  if (!loader) return;
+  setTimeout(() => {
+    loader.classList.add('loaded');
+    /* trigger decrypt after loader fade (550ms transition + buffer) */
+    setTimeout(() => {
+      document.querySelectorAll('.hero-name-line-inner').forEach((el, i) => {
+        setTimeout(() => decryptText(el), i * 250);
+      });
+    }, 650);
+  }, 600);
 }
 window.addEventListener('load', dismissLoader);
 /* also dismiss on bfcache restore (back/forward navigation) */
@@ -63,6 +72,56 @@ document.querySelectorAll('[data-anim]').forEach((el, i) => {
   el.style.transitionDelay = (i % 6) * 0.07 + 's';
   revealObserver.observe(el);
 });
+
+/* ─── Decrypted text reveal ─────────────────────────────────────── */
+function decryptText(el, {
+  speed = 60,
+  preScramble = 12,
+  revealDirection = 'center',
+  characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%&*'
+} = {}) {
+  const text = el.textContent;
+  const len = text.length;
+
+  /* reveal order: outward from the center */
+  const order = [];
+  if (revealDirection === 'center') {
+    const middle = Math.floor(len / 2);
+    let offset = 0;
+    while (order.length < len) {
+      const idx = offset % 2 === 0 ? middle + offset / 2 : middle - Math.ceil(offset / 2);
+      if (idx >= 0 && idx < len) order.push(idx);
+      offset++;
+    }
+  } else {
+    for (let i = 0; i < len; i++) order.push(i);
+  }
+
+  el.innerHTML = text.split('').map(ch => `<span class="decrypt-char">${ch}</span>`).join('');
+  const spans = el.querySelectorAll('.decrypt-char');
+  const revealed = new Set();
+  let pointer = 0;
+  let pre = 0;
+
+  const interval = setInterval(() => {
+    /* scramble all unrevealed chars every tick */
+    spans.forEach((span, i) => {
+      if (revealed.has(i)) return;
+      span.textContent = characters[Math.floor(Math.random() * characters.length)];
+    });
+    /* hold in full-chaos for preScramble ticks, then lock in one char per tick */
+    if (pre < preScramble) {
+      pre++;
+    } else if (pointer < order.length) {
+      const idx = order[pointer++];
+      spans[idx].textContent = text[idx];
+      spans[idx].classList.add('is-decrypted');
+      revealed.add(idx);
+    } else {
+      clearInterval(interval);
+    }
+  }, speed);
+}
 
 /* ─── Hero name mask reveal ──────────────────────────────────────── */
 const nameObserver = new IntersectionObserver(([entry]) => {

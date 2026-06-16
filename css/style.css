@@ -231,6 +231,14 @@ button        { font-family: inherit; cursor: none; border: none; background: no
 .hero-name-line-inner.visible { transform: translateY(0); }
 .hero-name-line:nth-child(2) .hero-name-line-inner { transition-delay: .12s; }
 
+/* decrypt-reveal characters */
+.decrypt-char {
+  display: inline-block;
+  color: var(--muted);
+  transition: color .15s var(--ease-out);
+}
+.decrypt-char.is-decrypted { color: inherit; }
+
 /* avatar */
 .hero-avatar {
   flex-shrink: 0;
@@ -266,6 +274,7 @@ button        { font-family: inherit; cursor: none; border: none; background: no
   justify-content: space-between;
   align-items: flex-end;
   gap: 24px;
+  margin-top: clamp(24px, 4vw, 48px);
 }
 
 .hero-email {
@@ -295,6 +304,7 @@ button        { font-family: inherit; cursor: none; border: none; background: no
   max-width: 600px;
   text-align: left;
   color: var(--ink);
+  text-indent: 2em;
 }
 
 /* Responsive: mobile adjustments */
@@ -383,6 +393,9 @@ button        { font-family: inherit; cursor: none; border: none; background: no
   transition: transform .7s var(--ease);
 }
 .work-item:hover .work-img { transform: scale(1.04); }
+
+.work-img--zoom { transform: scale(1.6); transform-origin: 18% 18%; }
+.work-item:hover .work-img--zoom { transform: scale(1.66); }
 
 /* work image CSS art */
 .work-bg--1 {
@@ -929,8 +942,12 @@ button        { font-family: inherit; cursor: none; border: none; background: no
   }
 
   /* ────── Hero ────── */
-  .hero-email { font-size: clamp(1.3rem, 5vw, 1.8rem); }
-  .hero-bio   { font-size: clamp(1rem, 3.5vw, 1.3rem); }
+  .hero-avatar {
+    width: clamp(100px, 14vw, 160px);
+    height: clamp(100px, 14vw, 160px);
+  }
+  .hero-email { font-size: clamp(1rem, 3.5vw, 1.4rem); }
+  .hero-bio   { font-size: clamp(0.85rem, 2.5vw, 1.1rem); }
 
   /* ────── Section header ────── */
   .section-header {
@@ -965,7 +982,7 @@ button        { font-family: inherit; cursor: none; border: none; background: no
     padding: calc(var(--nav-h) + 40px) 20px 60px;
   }
   .about-page-sticky { position: static; }
-  .about-page-photo { aspect-ratio: 4/3; }
+  .about-page-photo { aspect-ratio: 4/5; }
   .about-page-heading { margin-top: 28px; font-size: clamp(2rem, 9vw, 4rem); }
   .about-page-body { font-size: 1rem; line-height: 1.7; }
   .skills-wrap { gap: 6px; }
@@ -996,8 +1013,8 @@ button        { font-family: inherit; cursor: none; border: none; background: no
     padding: 32px 0 0;
   }
   .hero-avatar {
-    width: clamp(72px, 24vw, 120px);
-    height: clamp(72px, 24vw, 120px);
+    width: clamp(48px, 14vw, 80px);
+    height: clamp(48px, 14vw, 80px);
     margin-top: 0;
   }
   .hero-name { font-size: clamp(3.5rem, 18vw, 6rem); }

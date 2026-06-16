@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "dev": "python3 -m http.server 5500",
+    "build": "rm -rf dist && mkdir -p dist && cp -r index.html about.html contact.html works.html resume.pdf css js images dist/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
