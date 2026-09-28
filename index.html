@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Akinola Adeyi — Frontend / Full-Stack Engineer</title>
+  <meta name="description" content="Akinola Adeyi is a frontend and full-stack engineer building fast, thoughtful web products with React, Next.js, TypeScript and Node.js." />
+  <link rel="stylesheet" href="css/style.css?v=8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300..900;1,14..32,300..900&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="page-loader" id="pageLoader"><div class="loader-text"><span>A</span><span>K</span><span>D</span><span>E</span></div></div>
+  <div class="cursor" id="cursor"></div><div class="cursor-dot" id="cursorDot"></div>
+
+  <nav class="nav nav--closed" id="nav">
+    <a href="index.html" class="nav-logo">AKDE</a>
+    <div class="nav-links">
+      <a href="works.html" class="nav-link">Works</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="#cta" class="nav-link">Contact</a>
+      <a href="resume.pdf" target="_blank" rel="noopener" class="nav-link">Resume</a>
+      <span class="nav-dot" aria-hidden="true"></span>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <svg class="icon-open" width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><rect x="0" y="0" width="5" height="5"/><rect x="9" y="0" width="5" height="5"/><rect x="4.5" y="4.5" width="5" height="5"/><rect x="0" y="9" width="5" height="5"/><rect x="9" y="9" width="5" height="5"/></svg>
+      <svg class="icon-close" width="14" height="14" viewBox="0 0 12 12" fill="currentColor"><rect x="0" y="0" width="4" height="4"/><rect x="8" y="0" width="4" height="4"/><rect x="0" y="8" width="4" height="4"/><rect x="8" y="8" width="4" height="4"/></svg>
+    </button>
+  </nav>
+  <script>if(window.innerWidth>840)document.getElementById('nav').classList.remove('nav--closed');</script>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-top">
+        <h1 class="hero-name">
+          <span class="hero-name-line"><span class="hero-name-line-inner">AKINOLA</span></span>
+          <span class="hero-name-line"><span class="hero-name-line-inner">ADEYI</span></span>
+        </h1>
+        <div class="hero-avatar" data-anim><img src="images/avatar.jpg" alt="Akinola Adeyi" class="hero-avatar-image" /></div>
+      </div>
+      <div class="hero-bottom hero-bottom--updated">
+        <div class="hero-email" data-anim>
+          <a href="mailto:akintolaadeyi@gmail.com">Let's work together</a>
+          <button class="copy-btn" data-copy="akintolaadeyi@gmail.com" aria-label="Copy email">↗</button>
+        </div>
+        <div class="hero-intro" data-anim>
+          <p class="hero-role">Frontend / Full-Stack Engineer</p>
+          <p class="hero-bio">I build fast, thoughtful web products with React, Next.js and TypeScript — from polished interfaces to the systems behind them.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section work-section" id="work">
+      <div class="section-header"><h2 class="section-label" data-anim>selected work.</h2><a href="works.html" class="pill-btn" data-anim>View all work ↗</a></div>
+      <div class="work-grid">
+        <a href="works.html#folde-studio" class="work-item" data-anim><img class="work-img" src="images/foldestudio.gif" alt="Folde Studio" /><div class="work-overlay"><div><span class="work-title">Folde Studio</span><span class="work-type">AI HR platform · Product engineering</span></div></div></a>
+        <a href="works.html#ojuiboju" class="work-item" data-anim><img src="images/Ojuibubee.png" alt="Ojú Ibojú" class="work-img" /><div class="work-overlay"><div><span class="work-title">Ojú Ibojú</span><span class="work-type">Streaming · Full-stack</span></div></div></a>
+        <a href="works.html#canann-impact" class="work-item" data-anim><img src="images/canann.png" alt="Canann Impact Foundation" class="work-img work-img--zoom" /><div class="work-overlay"><div><span class="work-title">Canann Impact</span><span class="work-type">NGO platform · Web product</span></div></div></a>
+        <a href="works.html#pitchiq" class="work-item" data-anim><img src="images/PitchIQ.png" alt="PitchIQ" class="work-img" /><div class="work-overlay"><div><span class="work-title">PitchIQ</span><span class="work-type">Live sports · Data product</span></div></div></a>
+      </div>
+    </section>
+
+    <section class="engineering-section">
+      <div class="engineering-grid">
+        <div data-anim><p class="eyebrow">How I work</p><h2>Good interfaces are only half the job.</h2></div>
+        <div class="engineering-copy" data-anim>
+          <p>I care about the layer underneath the interface too: API contracts, state, data flow, performance, deployment and the edge cases users actually hit.</p>
+          <p>That means I can move from a Figma screen to a working React interface, connect it to a backend, integrate AI or third-party APIs, and ship the result.</p>
+          <div class="engineering-stack"><span>React</span><span>Next.js</span><span>TypeScript</span><span>Node.js</span><span>Express</span><span>Supabase</span><span>REST APIs</span><span>Vercel</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="section-header"><h2 class="section-label" data-anim>about.</h2><a href="about.html" class="pill-btn" data-anim>More about me ↗</a></div>
+      <p class="about-statement" data-anim>I’m Akinola, a Nigeria-based engineer who likes turning rough ideas into products people can actually use. I’m strongest at frontend engineering, but I’m comfortable working across the stack when the product needs it.</p>
+    </section>
+
+    <section class="cta-dark" id="cta">
+      <div class="cta-socials" data-anim><a href="https://www.linkedin.com/in/akinola-adeyi" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/akintolaadeyi-gif" target="_blank" rel="noopener">Github</a></div>
+      <h2 class="cta-heading" data-anim>Have a product to build?<br/>Let's talk about it.</h2>
+      <div class="cta-actions" data-anim><a href="mailto:akintolaadeyi@gmail.com" class="cta-btn">Get in Touch</a><div class="cta-avail"><span class="cta-avail-dot"></span>Open to remote work</div></div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="footer-inner"><div class="footer-col"><p>Abuja, Nigeria</p><p><a href="mailto:akintolaadeyi@gmail.com">akintolaadeyi@gmail.com</a></p></div><div class="footer-col footer-col--mid"><p>React · Next.js · TypeScript</p><p>Frontend · Full-stack · AI products</p></div><div class="footer-col footer-col--end"><p>© 2026 Akinola Adeyi</p><p>Built with HTML, CSS &amp; JavaScript</p></div></div></footer>
+  <div class="toast" id="toast">Email copied!</div>
+  <script src="js/main.js?v=3"></script>
+</body>
+</html>
