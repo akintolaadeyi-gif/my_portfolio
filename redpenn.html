@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedPenn AI — Portfolio Case Study</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main style="max-width: 800px; margin: 40px auto; padding: 0 20px; font-family: system-ui, sans-serif; line-height: 1.6; color: #333;">
+        <nav style="margin-bottom: 20px;">
+            <a href="index.html">← Back to Portfolio</a>
+        </nav>
+        
+        <h1>RedPenn AI: Chrome-Native Design Audits</h1>
+        <p><strong>Role:</strong> Full-Stack & Extension Developer</p>
+        <p><strong>Tech Stack:</strong> Chrome Extension (Manifest V3), React, Vite, FastAPI, Vercel, Supabase, Anthropic Vision API</p>
+        
+        <hr style="margin: 20px 0; border: none; border-top: 1px solid #ddd;">
+
+        <h2>Overview & Problem</h2>
+        <p>Fast product cycles make it easy for weak hierarchy, accessibility gaps, and generic design patterns to reach production unnoticed. RedPenn AI gives builders a real-time second opinion on webpage design directly inside the browser side panel.</p>
+
+        <h2>Architecture</h2>
+        <ul>
+            <li><strong>Client-Side Extension:</strong> Built with React and Vite using Manifest V3 to capture targeted viewport screenshots and DOM structure on demand.</li>
+            <li><strong>Hosted API:</strong> FastAPI backend deployed on Vercel managing Anthropic Vision requests and structured output parsing.</li>
+            <li><strong>Privacy Layer:</strong> Supabase/PostgreSQL handling anonymous telemetry via randomized local IDs and one-way hashing.</li>
+        </ul>
+
+        <h2>Links</h2>
+        <p>
+            <a href="https://redpenn.folde.work" target="_blank">Live Landing Page</a> | 
+            <a href="https://docs.google.com/document/d/1_CdS38vjg-Pd35ZEploNZf6Dn1sP7SBgR0B1wH2KS1E/edit" target="_blank">Full Google Doc Case Study</a>
+        </p>
+    </main>
+</body>
+</html>
